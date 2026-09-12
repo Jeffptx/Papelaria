@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nobre personalizados</title>
+  <title>Nobre Personalizados</title>
   <style>
     * {
       box-sizing: border-box;
@@ -17,7 +17,6 @@
       padding-bottom: 50px;
     }
 
-    /* Cabeçalho / Hero */
     header {
       background: linear-gradient(135deg, #1e1b4b 0%, #161920 100%);
       padding: 40px 20px;
@@ -49,7 +48,6 @@
       text-align: center;
     }
 
-    /* Galeria & Filtros */
     .filter-buttons {
       display: flex;
       justify-content: center;
@@ -96,7 +94,7 @@
       height: 220px;
       background-color: #262b36;
       object-fit: cover;
-      cursor: pointer; /* Mãozinha indicando que pode clicar */
+      cursor: pointer;
       transition: opacity 0.2s;
     }
     .gallery-img:hover {
@@ -115,7 +113,6 @@
       color: #8b949e;
     }
 
-    /* Modal / Popup de Zoom da Imagem */
     .image-modal {
       display: none;
       position: fixed;
@@ -152,7 +149,6 @@
       color: #ec4899;
     }
 
-    /* Área de Cotações / Calculadora */
     .quote-card {
       background-color: #161920;
       border: 1px solid #262b36;
@@ -199,7 +195,6 @@
       height: 16px;
     }
 
-    /* Resumo do Orçamento */
     .summary-box {
       border-top: 1px solid #262b36;
       padding-top: 20px;
@@ -244,7 +239,6 @@
 
 <div class="container">
 
-  <!-- Seção de Galeria -->
   <h3 class="section-title">Nosso Portfólio</h3>
   
   <div class="filter-buttons">
@@ -255,45 +249,40 @@
 
   <div class="gallery-grid" id="gallery">
     
-    <!-- Imagem 1 -->
     <div class="gallery-card" data-category="baloes">
-      <img src="arco1.jpg" class="gallery-img" alt="Arco Orgânico 1" onclick="openModal(this.src)">
+      <img src="html (1).jpg" class="gallery-img" alt="Arco Orgânico 1" onclick="openModal(this.src)">
       <div class="gallery-info">
         <h4>Arco de Balões Orgânico</h4>
         <p>Decoração personalizada para mesa principal.</p>
       </div>
     </div>
 
-    <!-- Imagem 2 -->
     <div class="gallery-card" data-category="baloes">
-      <img src="arco2.jpg" class="gallery-img" alt="Arco Orgânico 2" onclick="openModal(this.src)">
+      <img src="html (2).jpg" class="gallery-img" alt="Arco Orgânico 2" onclick="openModal(this.src)">
       <div class="gallery-info">
         <h4>Arco de Balões Desconstruído</h4>
         <p>Combinação moderna de cores e tamanhos.</p>
       </div>
     </div>
 
-    <!-- Imagem 3 -->
     <div class="gallery-card" data-category="baloes">
-      <img src="balao 3.jpg" class="gallery-img" alt="Balão 3" onclick="openModal(this.src)">
+      <img src="html (3).jpg" class="gallery-img" alt="Balão 3" onclick="openModal(this.src)">
       <div class="gallery-info">
         <h4>Estrutura com Balões</h4>
         <p>Montagem temática para entrada ou cenários.</p>
       </div>
     </div>
 
-    <!-- Imagem 4 -->
     <div class="gallery-card" data-category="papelaria">
-      <img src="IMG_20260907_172651251_HDR.jpg" class="gallery-img" alt="Topper de Bolo" onclick="openModal(this.src)">
+      <img src="html (4).jpg" class="gallery-img" alt="Topper de Bolo" onclick="openModal(this.src)">
       <div class="gallery-info">
         <h4>Topper de Bolo 3D</h4>
         <p>Papelaria cortada em camadas de alta qualidade.</p>
       </div>
     </div>
 
-    <!-- Imagem 5 -->
     <div class="gallery-card" data-category="papelaria">
-      <img src="IMG_20260907_172726392_MFNR.jpg" class="gallery-img" alt="Lembrancinhas" onclick="openModal(this.src)">
+      <img src="html (5).jpg" class="gallery-img" alt="Lembrancinhas" onclick="openModal(this.src)">
       <div class="gallery-info">
         <h4>Kit Lembrancinhas Mimos</h4>
         <p>Caixas decoradas com laço para convidados.</p>
@@ -302,19 +291,16 @@
 
   </div>
 
-  <!-- Modal para Zoom da Foto -->
   <div id="imageModal" class="image-modal" onclick="closeModal()">
     <span class="modal-close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modalImg">
   </div>
 
-  <!-- Seção de Cotação de Valores -->
   <h3 class="section-title">Simulador de Orçamento</h3>
   
   <div class="quote-card">
     <div class="quote-grid">
       
-      <!-- Opções de Papelaria -->
       <div class="option-group">
         <h4>Papelaria & Mimos</h4>
         <div class="option-item">
@@ -331,7 +317,6 @@
         </div>
       </div>
 
-      <!-- Opções de Balões -->
       <div class="option-group">
         <h4>Balões & Estruturas</h4>
         <div class="option-item">
@@ -350,7 +335,6 @@
 
     </div>
 
-    <!-- Resumo e Envio p/ WhatsApp -->
     <div class="summary-box">
       <p style="color: #8b949e; font-size: 0.9rem; margin-bottom: 5px;">Estimativa Total do Orçamento:</p>
       <div class="summary-total" id="total-val">R$ 0,00</div>
@@ -363,9 +347,8 @@
 </div>
 
 <script>
-  const whatsappNumber = "5547984722909"; 
+  const whatsappNumber = "5547999999999"; 
 
-  // Função para abrir a imagem em tela cheia (zoom)
   function openModal(imageSrc) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImg');
@@ -373,7 +356,6 @@
     modalImg.src = imageSrc;
   }
 
-  // Função para fechar a imagem
   function closeModal() {
     const modal = document.getElementById('imageModal');
     modal.style.display = 'none';
